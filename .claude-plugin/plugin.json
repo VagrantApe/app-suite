@@ -1,7 +1,7 @@
 {
   "name": "app-suite",
   "displayName": "App Suite",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Skills for finding, vetting and shipping mobile apps: App Store and Google Play keyword research from free public data, and go / no-go vetting of app ideas, with a store review to come.",
   "author": {
     "name": "Craig Lucksted",
