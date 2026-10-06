@@ -1,0 +1,23 @@
+{
+  "skill_name": "store-review",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I'm about to submit my app for the first time to both the App Store and Google Play. The project is at skills/store-review/tests/fixtures/bad-app. Will it pass review? Tell me what I need to fix.",
+      "expected_output": "",
+      "files": [],
+      "assertions": [
+        "The report gives a clear verdict (ready, ready after fixes, or not ready)",
+        "Every finding cites a specific Apple guideline section number or a named Google Play policy",
+        "Every finding points at evidence in the project (a file, a config key or a dependency)",
+        "Every finding comes with a concrete fix",
+        "It separates what blocks submission from what is only a risk, and from tasks done in the store consoles",
+        "It flags the missing account deletion (Apple 5.1.1(v))",
+        "It flags Google Sign-In without Sign in with Apple (Apple 4.8)",
+        "It flags the missing restore purchases (Apple 3.1.1)",
+        "It flags the development-client production build",
+        "It flags the ads SDK without App Tracking Transparency"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+ "expo": {
+  "name": "Clean App",
+  "slug": "clean-app",
+  "ios": {
+   "bundleIdentifier": "com.acme.cleanapp",
+   "config": {
+    "usesNonExemptEncryption": false
+   }
+  },
+  "android": {
+   "package": "com.acme.cleanapp",
+   "blockedPermissions": [
+    "android.permission.SYSTEM_ALERT_WINDOW",
+    "android.permission.READ_EXTERNAL_STORAGE",
+    "android.permission.WRITE_EXTERNAL_STORAGE"
+   ]
+  },
+  "plugins": [
+   [
+    "expo-camera",
+    {
+     "cameraPermission": "Clean App uses the camera to scan your plant so it can identify it."
+    }
+   ]
+  ],
+  "icon": "./assets/icon.png"
+ }
+}

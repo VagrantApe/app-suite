@@ -1,0 +1,1 @@
+{"expo": {"name": "Wrong Icon", "icon": "./assets/icon.png", "ios": {"bundleIdentifier": "com.acme.wrongicon"}, "android": {"package": "com.acme.wrongicon"}}}

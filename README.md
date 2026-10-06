@@ -6,7 +6,7 @@ Claude Code skills for building mobile apps quickly: find a niche worth building
 |---|---|---|
 | `aso-research` | Available | Keyword and niche research from free store data. It finds the phrases people actually search, sizes up the apps ranking for them, spots the gaps, and suggests store listing wording within each store's character limits |
 | `vet-app-idea` | Available | Scores an idea go / maybe / no-go on demand, competition, money, stack fit, policy risk and build size, with the evidence for each, then works through any no-go with you until it's fixed or shelved. Keeps one idea file per idea |
-| `store-review` | Coming | A pre-submission audit of an Expo project against Apple's and Google's rules, with each finding citing its guideline |
+| `store-review` | Available | A pre-submission review of an Expo project against Apple's App Review Guidelines and Google Play's policies: blockers, risks and console tasks, each with its guideline, the evidence in the code, and the fix. It checks Apple's live guidelines for changes since its rules were written |
 
 ## Install
 
@@ -27,8 +27,9 @@ Just ask. For example:
 - "Which Google Play search terms should an ADHD habit tracker target in the UK?"
 - "I want to build a habit tracker for people with ADHD at $3.99 a month. Is it worth building?"
 - "Re-check my shelved plant-watering idea."
+- "I'm about to submit my app to the App Store and Google Play. Will it pass review?"
 
-Keyword research saves a folder with `report.md`, the evidence tables, the raw data, and `report.html`, a readable page it opens in your browser. Vetting saves an idea file (markdown, plus a readable `.html`) that it picks up again next time you ask about the same idea.
+Keyword research saves a folder with `report.md`, the evidence tables, the raw data, and `report.html`, a readable page it opens in your browser. Vetting saves an idea file (markdown, plus a readable `.html`) that it picks up again next time you ask about the same idea. A store review saves a dated report in the app's project.
 
 ### Settings
 
@@ -37,6 +38,7 @@ Keyword research saves a folder with `report.md`, the evidence tables, the raw d
 | Research folder (`research_dir`) | `research/` in the current project | Where keyword research is saved |
 | Ideas folder (`ideas_dir`) | `ideas/` in the current project | Where idea files are kept |
 | Build stack (`stack`) | Expo, Firebase, RevenueCat, EAS Hosting | What you build with, for the stack-fit verdict |
+| Reviews folder (`reviews_dir`) | `store-review/` in the app's project | Where store reviews are saved |
 
 Change it with `/config`, or when installing: `claude plugin install app-suite@app-suite --config research_dir=~/app-research`.
 
@@ -55,6 +57,8 @@ node skills/aso-research/scripts/suggest.mjs "plant care" --expand
 node skills/aso-research/scripts/serp.mjs "plant watering schedule" "plant care"
 node --test skills/*/tests/*.test.mjs
 node skills/vet-app-idea/scripts/unit-economics.mjs --price 4.99 --period month --cost photo=0.04
+node skills/store-review/scripts/scan.mjs skills/store-review/tests/fixtures/bad-app
+node skills/store-review/scripts/drift.mjs
 claude plugin validate .claude-plugin/plugin.json --strict
 ```
 

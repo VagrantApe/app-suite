@@ -1,0 +1,526 @@
+{
+ "asOf": "2026-10-06",
+ "url": "https://developer.apple.com/app-store/review/guidelines/",
+ "sections": {
+  "1": {
+   "title": "1. Safety When people install an app from the App Store, they want to feel confident that ",
+   "hash": "e3d82b9f7b55"
+  },
+  "2": {
+   "title": "2. Performance <span",
+   "hash": "f88685aa8208"
+  },
+  "3": {
+   "title": "3. Business There are many ways to monetize your app on the App Store. If your business mo",
+   "hash": "e095c0b5d616"
+  },
+  "4": {
+   "title": "4. Design Apple customers place a high value on products that are simple, refined, innovat",
+   "hash": "7b45dcec1575"
+  },
+  "5": {
+   "title": "5. Legal Apps must comply with all legal requirements in any location where you make them ",
+   "hash": "b1ac33a41869"
+  },
+  "1.1": {
+   "title": "1.1 Objectionable Content Apps should not include content that is offensive, insensitive, ",
+   "hash": "99644742aa0e"
+  },
+  "1.1.1": {
+   "title": "1.1.1 Defamatory, discriminatory, or mean-spirited content, including references or commen",
+   "hash": "b38a2a9f84bd"
+  },
+  "1.1.2": {
+   "title": "1.1.2 Realistic portrayals of people or animals being killed, maimed, tortured, or abused,",
+   "hash": "b2bbf37a38e4"
+  },
+  "1.1.3": {
+   "title": "1.1.3 Depictions that encourage illegal or reckless use of weapons and dangerous objects, ",
+   "hash": "cae62c99cbc7"
+  },
+  "1.1.4": {
+   "title": "1.1.4 Overtly sexual or pornographic material, defined as “explicit descriptions or displa",
+   "hash": "dedb73198fc0"
+  },
+  "1.1.5": {
+   "title": "1.1.5 Inflammatory religious commentary or inaccurate or misleading quotations of religiou",
+   "hash": "7c3de1e08722"
+  },
+  "1.1.6": {
+   "title": "1.1.6 False information and features, including inaccurate device data or trick/joke funct",
+   "hash": "296f18f71b3c"
+  },
+  "1.1.7": {
+   "title": "1.1.7 Harmful concepts which capitalize or seek to profit on recent or current events, suc",
+   "hash": "105196cb9c81"
+  },
+  "1.2": {
+   "title": "1.2 User-Generated Content Apps with user-generated content present particular challenges,",
+   "hash": "75605d76eb64"
+  },
+  "1.2.1": {
+   "title": "1.2.1 Creator Content Apps which feature content from a specific community of users called",
+   "hash": "d1e49578b092"
+  },
+  "1.3": {
+   "title": "1.3 Kids Category The Kids Category is a great way for people to easily find apps that are",
+   "hash": "1f6762bedfb5"
+  },
+  "1.4": {
+   "title": "1.4 Physical Harm If your app behaves in a way that risks physical harm, we may reject it.",
+   "hash": "682932be12f8"
+  },
+  "1.4.1": {
+   "title": "1.4.1 Medical apps that could provide inaccurate data or information, or that could be use",
+   "hash": "fb0186afc3ab"
+  },
+  "1.4.2": {
+   "title": "1.4.2 Drug dosage calculators must come from the drug manufacturer, a hospital, university",
+   "hash": "52a806cd3884"
+  },
+  "1.4.3": {
+   "title": "1.4.3 Apps that encourage consumption of tobacco and vape products, illegal drugs, or exce",
+   "hash": "24f9c520c1ed"
+  },
+  "1.4.4": {
+   "title": "1.4.4 Apps may only display DUI checkpoints that are published by law enforcement agencies",
+   "hash": "292ebe7f1106"
+  },
+  "1.4.5": {
+   "title": "1.4.5 Apps should not urge customers to participate in activities (like bets, challenges, ",
+   "hash": "8ba7f2d25ba3"
+  },
+  "1.5": {
+   "title": "1.5 Developer Information People need to know how to reach you with questions and support ",
+   "hash": "0d42dd531e70"
+  },
+  "1.6": {
+   "title": "1.6 Data Security Apps should implement appropriate security measures to ensure proper han",
+   "hash": "e039e177ecfb"
+  },
+  "1.7": {
+   "title": "1.7 Reporting Criminal Activity Apps for reporting alleged criminal activity must involve ",
+   "hash": "7fa13cb41647"
+  },
+  "2.1": {
+   "title": "2.1 App Completeness (a) Submissions to App Review, including apps you make available for ",
+   "hash": "93372e895082"
+  },
+  "2.2": {
+   "title": "2.2 Beta Testing Demos, betas, and trial versions of your app don’t belong on the App Stor",
+   "hash": "679a84d407a2"
+  },
+  "2.3": {
+   "title": "2.3 Accurate Metadata Customers should know what they’re getting when they download or buy",
+   "hash": "8c830e1f39d8"
+  },
+  "2.3.1": {
+   "title": "2.3.1 (a) Don’t include any hidden, dormant, or undocumented features in your app; your ap",
+   "hash": "3f168557ab56"
+  },
+  "2.3.2": {
+   "title": "2.3.2 If your app includes in-app purchases, make sure your app description, screenshots, ",
+   "hash": "8bde1c39cf95"
+  },
+  "2.3.3": {
+   "title": "2.3.3 Screenshots should show the app in use, and not merely the title art, login page, or",
+   "hash": "55b5a22631fe"
+  },
+  "2.3.4": {
+   "title": "2.3.4 Previews are a great way for customers to see what your app looks like and what it d",
+   "hash": "d4ecdb25f170"
+  },
+  "2.3.5": {
+   "title": "2.3.5 Select the most appropriate category for your app, and check out the App Store Categ",
+   "hash": "6ebd39d368b6"
+  },
+  "2.3.6": {
+   "title": "2.3.6 Answer the age rating questions in App Store Connect honestly so that your app align",
+   "hash": "ac15e604d862"
+  },
+  "2.3.7": {
+   "title": "2.3.7 Choose a unique app name, assign keywords that accurately describe your app, and don",
+   "hash": "8889f47b5479"
+  },
+  "2.3.8": {
+   "title": "2.3.8 Metadata should be appropriate for all audiences, so make sure your app and in-app p",
+   "hash": "9e3103715954"
+  },
+  "2.3.9": {
+   "title": "2.3.9 You are responsible for securing the rights to use all materials in your app icons, ",
+   "hash": "fefd8be142b2"
+  },
+  "2.3.10": {
+   "title": "2.3.10 Make sure your app is focused on the experience of the Apple platforms it supports,",
+   "hash": "f2da6a1a19b7"
+  },
+  "2.3.11": {
+   "title": "2.3.11 Apps you submit for pre-order on the App Store must be complete and deliverable as ",
+   "hash": "44bdac1f783d"
+  },
+  "2.3.12": {
+   "title": "2.3.12 Apps must clearly describe new features and product changes in their “What’s New” t",
+   "hash": "2ef4f39826af"
+  },
+  "2.3.13": {
+   "title": "2.3.13 In-app events are timely events that happen within your app. To feature your event ",
+   "hash": "f5579b3408eb"
+  },
+  "2.4": {
+   "title": "2.4 Hardware Compatibility <li",
+   "hash": "eaa847ac6c51"
+  },
+  "2.4.1": {
+   "title": "2.4.1 To ensure people get the most out of your app, iPhone apps should run on iPad whenev",
+   "hash": "d66c351eb2aa"
+  },
+  "2.4.2": {
+   "title": "2.4.2 Design your app to use power efficiently and be used in a way that does not risk dam",
+   "hash": "d6bf0259bf3e"
+  },
+  "2.4.3": {
+   "title": "2.4.3 People should be able to use your Apple TV app without the need for hardware inputs ",
+   "hash": "1bb7bb6e3250"
+  },
+  "2.4.4": {
+   "title": "2.4.4 Apps should never suggest or require a restart of the device or modifications to sys",
+   "hash": "f3f720728306"
+  },
+  "2.4.5": {
+   "title": "2.4.5 Apps distributed via the Mac App Store have some additional requirements to keep in ",
+   "hash": "5920fdd8de7d"
+  },
+  "2.5": {
+   "title": "2.5 Software Requirements <li data-nr",
+   "hash": "2bc1ef29df09"
+  },
+  "2.5.1": {
+   "title": "2.5.1 Apps may only use public APIs and must run on the currently shipping OS. Learn more ",
+   "hash": "9175bf52a8f4"
+  },
+  "2.5.2": {
+   "title": "2.5.2 Apps should be self-contained in their bundles, and may not read or write data outsi",
+   "hash": "f27d39f905dc"
+  },
+  "2.5.3": {
+   "title": "2.5.3 Apps that transmit viruses, files, computer code, or programs that may harm or disru",
+   "hash": "05d1d736b787"
+  },
+  "2.5.4": {
+   "title": "2.5.4 Multitasking apps may only use background services for their intended purposes: VoIP",
+   "hash": "7f13c143d90e"
+  },
+  "2.5.5": {
+   "title": "2.5.5 Apps must be fully functional on IPv6-only networks. <li data-nr",
+   "hash": "ce32e61dd2e5"
+  },
+  "2.5.6": {
+   "title": "2.5.6 Apps that browse the web must use the appropriate WebKit framework and WebKit JavaSc",
+   "hash": "01c3773c64ee"
+  },
+  "2.5.7": {
+   "title": "2.5.7 Intentionally omitted. <li",
+   "hash": "d212ef8ce4fb"
+  },
+  "2.5.8": {
+   "title": "2.5.8 Apps that create alternate desktop/home screen environments will be rejected. <li da",
+   "hash": "31394ba65de8"
+  },
+  "2.5.9": {
+   "title": "2.5.9 Apps that alter or disable the functions of standard switches, such as the Volume Up",
+   "hash": "bc00c225dd90"
+  },
+  "2.5.10": {
+   "title": "2.5.10 Intentionally omitted. <li data-nr",
+   "hash": "6e65024a3aee"
+  },
+  "2.5.11": {
+   "title": "2.5.11 SiriKit and Shortcuts (i) Apps integrating SiriKit and Shortcuts should only sign u",
+   "hash": "49237597732f"
+  },
+  "2.5.12": {
+   "title": "2.5.12 Apps using CallKit or including an SMS Fraud Extension should only block phone numb",
+   "hash": "15317009bc19"
+  },
+  "2.5.13": {
+   "title": "2.5.13 Apps using facial recognition for account authentication must use LocalAuthenticati",
+   "hash": "99119d72270b"
+  },
+  "2.5.14": {
+   "title": "2.5.14 Apps must request explicit user consent and provide a clear visual and/or audible i",
+   "hash": "7d1a587e8863"
+  },
+  "2.5.15": {
+   "title": "2.5.15 Apps that enable users to view and select files should include items from the Files",
+   "hash": "4d766fb4b5f7"
+  },
+  "2.5.16": {
+   "title": "2.5.16 Widgets, extensions, and notifications should be related to the content and functio",
+   "hash": "a699ae3480e3"
+  },
+  "2.5.17": {
+   "title": "2.5.17 Apps that support Matter must use Apple’s support framework for Matter to initiate ",
+   "hash": "5bbdc529d139"
+  },
+  "2.5.18": {
+   "title": "2.5.18 Display advertising should be limited to your main app binary, and should not be in",
+   "hash": "a896b3e44b7a"
+  },
+  "3.1": {
+   "title": "3.1 Payments <span",
+   "hash": "08070b1f9dae"
+  },
+  "3.1.1": {
+   "title": "3.1.1 In-App Purchase: If you want to unlock features or functionality within your app, (b",
+   "hash": "b29ee81e3dda"
+  },
+  "3.1.2": {
+   "title": "3.1.2 Subscriptions: Apps may offer auto-renewable in-app purchase subscriptions, regardle",
+   "hash": "3b4bbcd6c018"
+  },
+  "3.1.3": {
+   "title": "3.1.3 Other Purchase Methods: The following apps may use purchase methods other than in-ap",
+   "hash": "6ceeaf8c8090"
+  },
+  "3.1.4": {
+   "title": "3.1.4 Hardware-Specific Content: In limited circumstances, such as when features are depen",
+   "hash": "143b4d97706a"
+  },
+  "3.1.5": {
+   "title": "3.1.5 Cryptocurrencies: (i) Wallets: Apps may facilitate virtual currency storage, provide",
+   "hash": "3d69ab5e7e40"
+  },
+  "3.2": {
+   "title": "3.2 Other Business Model Issues The lists below are not exhaustive, and your submission ma",
+   "hash": "c33aab57b314"
+  },
+  "3.2.1": {
+   "title": "3.2.1 Acceptable (i) Displaying your own apps for purchase or promotion within your app, p",
+   "hash": "8dc62b13b244"
+  },
+  "3.2.2": {
+   "title": "3.2.2 Unacceptable (i) Creating an interface for displaying third-party apps, extensions, ",
+   "hash": "331d175b813d"
+  },
+  "4.1": {
+   "title": "4.1 Copycats (a) Come up with your own ideas. We know you have them, so make yours come to",
+   "hash": "b125a72d31c1"
+  },
+  "4.2": {
+   "title": "4.2 Minimum Functionality Your app should include features, content, and UI that elevate i",
+   "hash": "b3c04a8cd34d"
+  },
+  "4.2.1": {
+   "title": "4.2.1 Apps using ARKit should provide rich and integrated augmented reality experiences; m",
+   "hash": "d8855fe1c43a"
+  },
+  "4.2.2": {
+   "title": "4.2.2 Other than catalogs, apps shouldn’t primarily be marketing materials, advertisements",
+   "hash": "46a2c08ad6c8"
+  },
+  "4.2.3": {
+   "title": "4.2.3 (i) Your app should work on its own without requiring installation of another app to",
+   "hash": "58e6ad272743"
+  },
+  "4.2.4": {
+   "title": "4.2.4 Intentionally omitted. <li",
+   "hash": "4499634854ec"
+  },
+  "4.2.5": {
+   "title": "4.2.5 Intentionally omitted. <li",
+   "hash": "8d1efe378c3e"
+  },
+  "4.2.6": {
+   "title": "4.2.6 Apps created from a commercialized template or app generation service will be reject",
+   "hash": "9085acf698aa"
+  },
+  "4.2.7": {
+   "title": "4.2.7 Remote Desktop Clients: If your remote desktop app acts as a mirror of specific soft",
+   "hash": "95a42b10ba6b"
+  },
+  "4.3": {
+   "title": "4.3 Spam (a) Don’t create multiple Bundle IDs of the same app (for example, submitting a s",
+   "hash": "867cc81a7a9a"
+  },
+  "4.4": {
+   "title": "4.4 Extensions Apps hosting or containing extensions must comply with the App Extension Pr",
+   "hash": "54c497e2b3d0"
+  },
+  "4.4.1": {
+   "title": "4.4.1 Keyboard extensions have some additional rules. They must: Provide keyboard input fu",
+   "hash": "22fd922e28b8"
+  },
+  "4.4.2": {
+   "title": "4.4.2 Safari extensions must run on the current version of Safari on the relevant Apple op",
+   "hash": "7392e4d413b9"
+  },
+  "4.4.3": {
+   "title": "4.4.3 Intentionally omitted. <span",
+   "hash": "fbaec5308f28"
+  },
+  "4.5": {
+   "title": "4.5 Apple Sites and Services <li data-nr",
+   "hash": "99bf690c5e87"
+  },
+  "4.5.1": {
+   "title": "4.5.1 Apps may use approved Apple RSS feeds such as the iTunes Store RSS feed, but may not",
+   "hash": "847e9edb4d68"
+  },
+  "4.5.2": {
+   "title": "4.5.2 Apple Music (i) MusicKit on iOS lets users play Apple Music and their local music li",
+   "hash": "6f6ccf752e8c"
+  },
+  "4.5.3": {
+   "title": "4.5.3 Do not use Apple Services to spam, phish, or send unsolicited messages to customers,",
+   "hash": "fe0c31530606"
+  },
+  "4.5.4": {
+   "title": "4.5.4 Push Notifications must not be required for the app to function, and should not be u",
+   "hash": "ee9c1e9f1d35"
+  },
+  "4.5.5": {
+   "title": "4.5.5 Only use Game Center Player IDs in a manner approved by the Game Center terms and do",
+   "hash": "eea9a0348448"
+  },
+  "4.5.6": {
+   "title": "4.5.6 Apps may use Unicode characters that render as Apple emoji in their app and app meta",
+   "hash": "18442d4f05b4"
+  },
+  "4.6": {
+   "title": "4.6 Intentionally omitted. <span",
+   "hash": "992472c7fded"
+  },
+  "4.7": {
+   "title": "4.7 Mini apps, mini games, streaming games, chatbots, plug-ins, and game emulators Apps ma",
+   "hash": "a8a776065649"
+  },
+  "4.7.1": {
+   "title": "4.7.1 Software offered in apps under this rule must: follow all privacy guidelines, includ",
+   "hash": "e0cfac6a7747"
+  },
+  "4.7.2": {
+   "title": "4.7.2 Your app may not extend or expose native platform APIs or technologies to the softwa",
+   "hash": "6a4582b29031"
+  },
+  "4.7.3": {
+   "title": "4.7.3 Your app may not share data or privacy permissions to any individual software offere",
+   "hash": "ac70ffa0c447"
+  },
+  "4.7.4": {
+   "title": "4.7.4 You must provide an index of software and metadata available in your app. It must in",
+   "hash": "64aee9b122cf"
+  },
+  "4.7.5": {
+   "title": "4.7.5 Your app must provide a way for users to identify software that exceeds the app’s ag",
+   "hash": "aee2f75a7292"
+  },
+  "4.8": {
+   "title": "4.8 Login Services Apps that use a third-party or social login service (such as Facebook L",
+   "hash": "780d01e13fb3"
+  },
+  "4.9": {
+   "title": "4.9 Apple Pay Apps using Apple Pay must provide all material purchase information to the u",
+   "hash": "09d854bf8e83"
+  },
+  "4.10": {
+   "title": "4.10 Monetizing Built-In Capabilities You may not monetize built-in capabilities provided ",
+   "hash": "cbef3c1afd2d"
+  },
+  "5.1": {
+   "title": "5.1 Privacy Protecting user privacy is paramount in the Apple ecosystem, and you should us",
+   "hash": "c9288ae45155"
+  },
+  "5.1.1": {
+   "title": "5.1.1 Data Collection and Storage (i) Privacy Policies: All apps must include a link to th",
+   "hash": "7a9f3180e8a2"
+  },
+  "5.1.2": {
+   "title": "5.1.2 Data Use and Sharing (i) Unless otherwise permitted by law, you may not use, transmi",
+   "hash": "97f68717ca7b"
+  },
+  "5.1.3": {
+   "title": "5.1.3 Health and Health Research Health, fitness, and medical data are especially sensitiv",
+   "hash": "5a3f5d07b8d8"
+  },
+  "5.1.4": {
+   "title": "5.1.4 Kids (a) For many reasons, it is critical to use care when dealing with personal dat",
+   "hash": "4609e81ed9d8"
+  },
+  "5.1.5": {
+   "title": "5.1.5 Location Services Use Location Services in your app only when it is directly relevan",
+   "hash": "a4f6d3d1f7e7"
+  },
+  "5.2": {
+   "title": "5.2 Intellectual Property Make sure your app only includes content that you created or tha",
+   "hash": "8d6f4519e7e1"
+  },
+  "5.2.1": {
+   "title": "5.2.1 Generally: Don’t use protected third-party material such as trademarks, copyrighted ",
+   "hash": "0cfd029fd291"
+  },
+  "5.2.2": {
+   "title": "5.2.2 Third-Party Sites/Services: If your app uses, accesses, monetizes access to, or disp",
+   "hash": "31855ffc63e2"
+  },
+  "5.2.3": {
+   "title": "5.2.3 Audio/Video Downloading: Apps should not facilitate illegal file sharing or include ",
+   "hash": "3fad041403e6"
+  },
+  "5.2.4": {
+   "title": "5.2.4 Apple Endorsements (a) Don’t suggest or imply that Apple is a source or supplier of ",
+   "hash": "1362fca4d4ed"
+  },
+  "5.2.5": {
+   "title": "5.2.5 Apple Products: Don’t create an app that appears confusingly similar to an existing ",
+   "hash": "d18687e7cb75"
+  },
+  "5.3": {
+   "title": "5.3 Gaming, Gambling, and Lotteries Gaming, gambling, and lotteries can be tricky to manag",
+   "hash": "1e6875ab8131"
+  },
+  "5.3.1": {
+   "title": "5.3.1 Sweepstakes and contests must be sponsored by the developer of the app. <li",
+   "hash": "dfee24889fb0"
+  },
+  "5.3.2": {
+   "title": "5.3.2 Official rules for sweepstakes, contests, and raffles must be presented in the app a",
+   "hash": "7dba7cb4a01d"
+  },
+  "5.3.3": {
+   "title": "5.3.3 Apps may not use in-app purchase to purchase credit or currency for use in conjuncti",
+   "hash": "dd1a22ef7089"
+  },
+  "5.3.4": {
+   "title": "5.3.4 Apps that offer real money gaming (e.g. sports betting, poker, casino games, horse r",
+   "hash": "a68a37b2d82a"
+  },
+  "5.4": {
+   "title": "5.4 VPN Apps Apps offering VPN services must utilize the NEVPNManager API and may only be ",
+   "hash": "77bfe04de4a7"
+  },
+  "5.5": {
+   "title": "5.5 Mobile Device Management Mobile Device Management Apps that offer Mobile Device Manage",
+   "hash": "16f2467d7adf"
+  },
+  "5.6": {
+   "title": "5.6 Developer Code of Conduct Please treat everyone with respect, whether in your response",
+   "hash": "3a2b98f6a79d"
+  },
+  "5.6.1": {
+   "title": "5.6.1 App Store Reviews App Store customer reviews can be an integral part of the app expe",
+   "hash": "9a80323caa4c"
+  },
+  "5.6.2": {
+   "title": "5.6.2 Developer Identity Providing verifiable information to Apple and customers is critic",
+   "hash": "b32ef339c405"
+  },
+  "5.6.3": {
+   "title": "5.6.3 Discovery Fraud Participating in the App Store requires integrity and a commitment t",
+   "hash": "449b67bb9ad5"
+  },
+  "5.6.4": {
+   "title": "5.6.4 App Quality Customers expect the highest quality from the App Store, and maintaining",
+   "hash": "ea29db751920"
+  }
+ }
+}

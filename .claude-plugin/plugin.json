@@ -2,7 +2,7 @@
   "name": "app-suite",
   "displayName": "App Suite",
   "version": "0.2.0",
-  "description": "Skills for finding, vetting and shipping mobile apps: App Store and Google Play keyword research from free public data, and go / no-go vetting of app ideas, with a store review to come.",
+  "description": "Skills for finding, vetting and shipping mobile apps: App Store and Google Play keyword research from free public data, go / no-go vetting of app ideas with a cost analysis, and a pre-submission store review.",
   "author": {
     "name": "Craig Lucksted",
     "url": "https://github.com/VagrantApe"
@@ -34,6 +34,11 @@
       "type": "string",
       "title": "Build stack",
       "description": "What you build apps with, for judging whether an idea fits. Leave empty for Expo, Firebase, RevenueCat and EAS Hosting."
+    },
+    "reviews_dir": {
+      "type": "string",
+      "title": "Reviews folder",
+      "description": "Where store reviews are saved, one dated folder per review. Leave empty to use store-review/ in the app's project folder."
     }
   }
 }

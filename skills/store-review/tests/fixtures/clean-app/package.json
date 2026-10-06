@@ -1,0 +1,1 @@
+{ "name": "clean-app", "dependencies": { "expo": "~57.0.0", "react-native-purchases": "^10.0.0", "expo-camera": "~19.0.0", "@react-native-google-signin/google-signin": "^16.0.0", "expo-apple-authentication": "~9.0.0" } }
