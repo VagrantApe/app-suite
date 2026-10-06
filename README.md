@@ -30,7 +30,7 @@ Restart Codex afterwards so it picks up the skills.
 
 **Requires** Node.js 18 or newer on your PATH (the scripts are plain Node with no npm packages), and network access for keyword research and the guideline check. Codex's sandbox blocks the network by default: approve it when asked, or set `sandbox_workspace_write.network_access = true` in `~/.codex/config.toml`.
 
-**Updating:** `claude plugin update app-suite@app-suite`, or `codex plugin marketplace upgrade app-suite` in Codex.
+**Updating:** in Claude Code, `claude plugin update app-suite@app-suite`. In Codex, `codex plugin marketplace upgrade app-suite && codex plugin add app-suite@app-suite`. Restart either afterwards.
 
 ## Use it
 
