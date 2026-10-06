@@ -1,0 +1,53 @@
+{
+  "asOf": "2026-10-06",
+  "note": "Standard (non-batch) prices in US dollars, per 1M tokens for text and per image for image models. Prices change often: when a verdict is close, check the sources and update this file.",
+  "sources": {
+    "anthropic": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "openai": "https://developers.openai.com/api/docs/pricing",
+    "google": "https://ai.google.dev/gemini-api/docs/pricing",
+    "xai": "https://docs.x.ai/docs/models"
+  },
+  "text": [
+    { "provider": "anthropic", "model": "claude-fable-5-1", "name": "Claude Fable 5.1", "tier": "top", "input": 10, "output": 50 },
+    { "provider": "anthropic", "model": "claude-opus-5-5", "name": "Claude Opus 5.5", "tier": "top", "input": 4, "output": 20 },
+    { "provider": "anthropic", "model": "claude-sonnet-5-5", "name": "Claude Sonnet 5.5", "tier": "mid", "input": 2, "output": 10 },
+    { "provider": "anthropic", "model": "claude-haiku-4-5", "name": "Claude Haiku 4.5", "tier": "small", "input": 1, "output": 5 },
+    { "provider": "openai", "model": "gpt-6-astra", "name": "GPT-6 Astra", "tier": "top", "input": 10, "output": 50 },
+    { "provider": "openai", "model": "gpt-6.1-sol", "name": "GPT-6.1 Sol", "tier": "mid", "input": 2, "output": 10 },
+    { "provider": "openai", "model": "gpt-5.4-mini", "name": "GPT-5.4 mini", "tier": "small", "input": 0.75, "output": 4.5 },
+    { "provider": "openai", "model": "gpt-6-luna", "name": "GPT-6 Luna", "tier": "small", "input": 0.1, "output": 0.5 },
+    {
+      "provider": "google",
+      "model": "gemini-3.8-flash",
+      "name": "Gemini 3.8 Flash",
+      "tier": "mid",
+      "input": 0.75,
+      "output": 3.75,
+      "changes": { "on": "2027-01-01", "input": 1.5, "output": 7.5 }
+    },
+    { "provider": "google", "model": "gemini-3.5-flash", "name": "Gemini 3.5 Flash", "tier": "mid", "input": 1.5, "output": 9 },
+    { "provider": "google", "model": "gemini-3.5-flash-lite", "name": "Gemini 3.5 Flash-Lite", "tier": "small", "input": 0.3, "output": 2.5 },
+    { "provider": "xai", "model": "grok-4.7", "name": "Grok 4.7", "tier": "top", "input": 2, "output": 6 },
+    { "provider": "xai", "model": "grok-4.3", "name": "Grok 4.3", "tier": "mid", "input": 1.25, "output": 2.5 }
+  ],
+  "image": [
+    {
+      "provider": "openai",
+      "model": "gpt-image-2.5-sunburst",
+      "name": "GPT Image 2.5 (medium, 1024px)",
+      "perImage": 0.032,
+      "estimate": "OpenAI prices image output at $30 per 1M tokens and publishes no per-image price; this assumes about 1,056 output tokens for a medium 1024x1024 image. Check OpenAI's image cost calculator."
+    },
+    {
+      "provider": "openai",
+      "model": "gpt-image-2.5-sunburst",
+      "name": "GPT Image 2.5 (high, 1024px)",
+      "perImage": 0.125,
+      "estimate": "Assumes about 4,160 output tokens for a high-quality 1024x1024 image at $30 per 1M. Check OpenAI's image cost calculator."
+    },
+    { "provider": "google", "model": "gemini-3.1-flash-image", "name": "Gemini 3.1 Flash Image (1K)", "perImage": 0.067 },
+    { "provider": "google", "model": "gemini-3.5-flash-lite-image", "name": "Gemini 3.5 Flash-Lite Image (1K)", "perImage": 0.0336 },
+    { "provider": "xai", "model": "grok-imagine-image-2.0", "name": "Grok Imagine Image 2.0", "perImage": 0.04 }
+  ],
+  "noImages": ["anthropic"]
+}

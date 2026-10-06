@@ -2,17 +2,38 @@
   "name": "app-suite",
   "displayName": "App Suite",
   "version": "0.1.0",
-  "description": "Skills for finding, vetting and shipping mobile apps: App Store and Google Play keyword research from free public data, with idea vetting and a store review to come.",
-  "author": { "name": "Craig Lucksted", "url": "https://github.com/VagrantApe" },
+  "description": "Skills for finding, vetting and shipping mobile apps: App Store and Google Play keyword research from free public data, and go / no-go vetting of app ideas, with a store review to come.",
+  "author": {
+    "name": "Craig Lucksted",
+    "url": "https://github.com/VagrantApe"
+  },
   "homepage": "https://github.com/VagrantApe/app-suite#readme",
   "repository": "https://github.com/VagrantApe/app-suite",
   "license": "MIT",
-  "keywords": ["aso", "app-store", "google-play", "keywords", "mobile", "expo", "indie"],
+  "keywords": [
+    "aso",
+    "app-store",
+    "google-play",
+    "keywords",
+    "mobile",
+    "expo",
+    "indie"
+  ],
   "userConfig": {
     "research_dir": {
       "type": "string",
       "title": "Research folder",
       "description": "Where research reports are saved, one folder per topic. Leave empty to save under research/ in the project you're working in."
+    },
+    "ideas_dir": {
+      "type": "string",
+      "title": "Ideas folder",
+      "description": "Where idea files are kept, one per idea. Leave empty to use ideas/ in the project you're working in."
+    },
+    "stack": {
+      "type": "string",
+      "title": "Build stack",
+      "description": "What you build apps with, for judging whether an idea fits. Leave empty for Expo, Firebase, RevenueCat and EAS Hosting."
     }
   }
 }

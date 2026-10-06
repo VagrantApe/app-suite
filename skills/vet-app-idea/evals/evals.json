@@ -1,0 +1,48 @@
+{
+  "skill_name": "vet-app-idea",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I want to build a plant-care app: you snap a photo of a sick houseplant and get an AI diagnosis and a care plan. $3.99/month subscription. Each diagnosis costs me about $0.03 in AI calls. Is this worth building?",
+      "expected_output": "Six verdicts with evidence; live keyword research (plant identification and care are crowded); money computed from the given cost; AI-content and saturated-category policy risks named.",
+      "files": [],
+      "assertions": [
+        "An idea file is saved in outputs as markdown, with a verdict (go, maybe or no-go) for each of six criteria: demand, competition gap, money, stack fit, policy risk and solo-build size",
+        "Each criterion's verdict comes with reasoning that cites specific evidence (a number, a named app, a named guideline or a named feature)",
+        "Demand and competition rest on keyword or store data fetched in this run (autocomplete suggestions or top-app ratings), not on general impressions",
+        "It does not reduce the idea to a single numeric score or average",
+        "The money verdict rests on explicit arithmetic: the net price after the store's cut compared with the cost per user per month",
+        "It names at least one store policy risk with the specific Apple guideline or Play policy and a compliance path"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Vet my app in this folder. Is it worth finishing and shipping?",
+      "expected_output": "Reads the codebase in the given folder to understand the app, states its price assumption, runs keyword research, scores six criteria. (Run it against any Expo project.)",
+      "files": [],
+      "assertions": [
+        "An idea file is saved in outputs as markdown, with a verdict (go, maybe or no-go) for each of six criteria: demand, competition gap, money, stack fit, policy risk and solo-build size",
+        "Each criterion's verdict comes with reasoning that cites specific evidence (a number, a named app, a named guideline or a named feature)",
+        "Demand and competition rest on keyword or store data fetched in this run (autocomplete suggestions or top-app ratings), not on general impressions",
+        "It does not reduce the idea to a single numeric score or average",
+        "It describes the app from its code (its features, payments and integrations), not just from the folder name",
+        "It states the price model it assumed, since the person didn't give one"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Quick gut check before I start: an app that makes a brand-new AI video of your pet every single day from a photo you upload once. I'd sell it as a $9.99 lifetime unlock, no subscription. Worth building?",
+      "expected_output": "Money is a no-go: a one-time price for a cost that continues daily (AI video per day). Overall looping, not go. Since this is one-shot, it lists the questions it would ask with recommended answers instead of inventing the person's answers.",
+      "files": [],
+      "assertions": [
+        "An idea file is saved in outputs as markdown, with a verdict (go, maybe or no-go) for each of six criteria: demand, competition gap, money, stack fit, policy risk and solo-build size",
+        "Each criterion's verdict comes with reasoning that cites specific evidence (a number, a named app, a named guideline or a named feature)",
+        "Demand and competition rest on keyword or store data fetched in this run (autocomplete suggestions or top-app ratings), not on general impressions",
+        "It does not reduce the idea to a single numeric score or average",
+        "Money is scored no-go because a one-time price can't cover a cost that continues every day",
+        "The overall verdict is not go: it's no-go or looping on money",
+        "For the no-go it offers concrete ways to fix it (for example a subscription, a cap, or a cheaper output) as questions or options with a recommendation, without pretending the person already chose one"
+      ]
+    }
+  ]
+}

@@ -5,7 +5,7 @@ Claude Code skills for building mobile apps quickly: find a niche worth building
 | Skill | Status | What it does |
 |---|---|---|
 | `aso-research` | Available | Keyword and niche research from free store data. It finds the phrases people actually search, sizes up the apps ranking for them, spots the gaps, and suggests store listing wording within each store's character limits |
-| `vet-app-idea` | Coming | Scores an idea on demand, competition, money, stack fit, policy risk and build size (go / maybe / no-go), and works through any no-go with you |
+| `vet-app-idea` | Available | Scores an idea go / maybe / no-go on demand, competition, money, stack fit, policy risk and build size, with the evidence for each, then works through any no-go with you until it's fixed or shelved. Keeps one idea file per idea |
 | `store-review` | Coming | A pre-submission audit of an Expo project against Apple's and Google's rules, with each finding citing its guideline |
 
 ## Install
@@ -25,14 +25,18 @@ Just ask. For example:
 - "Is there room for an app that reminds you to water your houseplants?"
 - "Find keywords for my meal-planning app and suggest an App Store name, subtitle and keyword field."
 - "Which Google Play search terms should an ADHD habit tracker target in the UK?"
+- "I want to build a habit tracker for people with ADHD at $3.99 a month. Is it worth building?"
+- "Re-check my shelved plant-watering idea."
 
-Each run saves a folder with `report.md`, the evidence tables, the raw data, and `report.html`, a readable page it opens in your browser.
+Keyword research saves a folder with `report.md`, the evidence tables, the raw data, and `report.html`, a readable page it opens in your browser. Vetting saves an idea file (markdown, plus a readable `.html`) that it picks up again next time you ask about the same idea.
 
 ### Settings
 
 | Setting | Default | What it does |
 |---|---|---|
-| Research folder (`research_dir`) | `research/` in the current project | Where research folders are saved |
+| Research folder (`research_dir`) | `research/` in the current project | Where keyword research is saved |
+| Ideas folder (`ideas_dir`) | `ideas/` in the current project | Where idea files are kept |
+| Build stack (`stack`) | Expo, Firebase, RevenueCat, EAS Hosting | What you build with, for the stack-fit verdict |
 
 Change it with `/config`, or when installing: `claude plugin install app-suite@app-suite --config research_dir=~/app-research`.
 
@@ -49,7 +53,8 @@ git clone https://github.com/VagrantApe/app-suite && cd app-suite
 claude --plugin-dir .                       # load the plugin from this checkout
 node skills/aso-research/scripts/suggest.mjs "plant care" --expand
 node skills/aso-research/scripts/serp.mjs "plant watering schedule" "plant care"
-node --test skills/aso-research/tests/*.test.mjs
+node --test skills/*/tests/*.test.mjs
+node skills/vet-app-idea/scripts/unit-economics.mjs --price 4.99 --period month --cost photo=0.04
 claude plugin validate .claude-plugin/plugin.json --strict
 ```
 
