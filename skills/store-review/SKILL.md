@@ -9,8 +9,11 @@ Check an app against what Apple and Google actually reject, before a reviewer do
 
 ## Where things are
 
-- **This skill's files:** `${CLAUDE_PLUGIN_ROOT}/skills/store-review/`. Below, `scripts/` and `references/` mean folders there. (If that path shows up literally, with the `${...}` still in it, the skill wasn't loaded as a plugin, and those folders are next to this file.)
-- **Reviews folder:** `${user_config.reviews_dir}`. If that's empty or shows up literally, use `store-review/` in the app's project folder. Each review gets a dated subfolder.
+- **This skill's folder** is the one this `SKILL.md` is in. Below, `scripts/` and `references/` mean folders there; run scripts by their full path, as `node "<skill folder>/scripts/scan.mjs" ...`. (In Claude Code that's `${CLAUDE_PLUGIN_ROOT}/skills/store-review/`; in Codex or another agent, the folder it loaded the skill from.) The other App Suite skills are next to it: `../aso-research/`, `../vet-app-idea/`, `../store-review/`.
+- **Reviews folder:** use the first of these that's set:
+  1. Claude Code's plugin setting: `${user_config.reviews_dir}` (skip it if it's empty, or shows up literally with the `${...}` still in it);
+  2. `reviews_dir` in `~/.config/app-suite/settings.json`, if that file exists (agents without plugin settings, like Codex, use this);
+  3. `store-review/` in the app's project folder. Each review gets a dated subfolder.
 - **The rules:** `references/rules.md`, the single source for what's checked, the citation, the severity and the fix.
 
 ## Workflow
@@ -72,7 +75,7 @@ Save it as `<review folder>/report.md`, using this structure so reviews compare 
 <From drift.mjs: changed sections and the rules they touch, or "none since <date>".>
 ```
 
-Every row cites its guideline as written in `references/rules.md`; don't paraphrase a section number. Then build the readable page and open it: `node "${CLAUDE_PLUGIN_ROOT}/skills/aso-research/scripts/render.mjs" <review folder>/report.md --open`. Tell the person the verdict, the blockers in a line each, and where the report is.
+Every row cites its guideline as written in `references/rules.md`; don't paraphrase a section number. Then build the readable page and open it: `node "<skill folder>/../aso-research/scripts/render.mjs" <review folder>/report.md --open`. Tell the person the verdict, the blockers in a line each, and where the report is.
 
 ### 6. The loop: fix, then review again
 

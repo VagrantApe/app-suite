@@ -16,9 +16,11 @@ Say so in the report. A confident "4,200 searches a month" would be invented; "s
 
 ## Where things are
 
-- **Scripts:** `${CLAUDE_PLUGIN_ROOT}/skills/aso-research/scripts/`. Below, `scripts/` means that folder; run them as `node "<that folder>/suggest.mjs" ...`. (If that path shows up literally, with the `${...}` still in it, the skill wasn't loaded as a plugin, and the scripts are in the `scripts/` folder next to this file.)
-- **Reference:** `${CLAUDE_PLUGIN_ROOT}/skills/aso-research/references/signals.md`, called `references/signals.md` below.
-- **Research folder:** `${user_config.research_dir}`. If that's empty or shows up literally, use `research/` in the current project. Each topic gets its own subfolder there.
+- **This skill's folder** is the one this `SKILL.md` is in. Below, `scripts/` and `references/` mean folders there; run scripts by their full path, as `node "<skill folder>/scripts/suggest.mjs" ...`. (In Claude Code that's `${CLAUDE_PLUGIN_ROOT}/skills/aso-research/`; in Codex or another agent, the folder it loaded the skill from.) The other App Suite skills are next to it: `../aso-research/`, `../vet-app-idea/`, `../store-review/`.
+- **Research folder:** use the first of these that's set:
+  1. Claude Code's plugin setting: `${user_config.research_dir}` (skip it if it's empty, or shows up literally with the `${...}` still in it);
+  2. `research_dir` in `~/.config/app-suite/settings.json`, if that file exists (agents without plugin settings, like Codex, use this);
+  3. `research/` in the current project. Each topic gets its own subfolder there.
 
 ## Scripts
 

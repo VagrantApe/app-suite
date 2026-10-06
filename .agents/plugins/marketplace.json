@@ -1,0 +1,20 @@
+{
+  "name": "app-suite",
+  "interface": {
+    "displayName": "App Suite"
+  },
+  "plugins": [
+    {
+      "name": "app-suite",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

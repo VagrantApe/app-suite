@@ -11,10 +11,16 @@ The output is an **idea file**. It opens with the **cost analysis**, front and c
 
 ## Where things are
 
-- **This skill's files:** `${CLAUDE_PLUGIN_ROOT}/skills/vet-app-idea/`. Below, `references/`, `scripts/` and `assets/` mean folders there. (If that path shows up literally, with the `${...}` still in it, the skill wasn't loaded as a plugin, and those folders are next to this file.)
-- **Ideas folder:** `${user_config.ideas_dir}`. If that's empty or shows up literally, use `ideas/` in the current project. One file per idea: `<slug>.md`.
-- **The stack ideas are built on:** `${user_config.stack}`. If that's empty or shows up literally, assume Expo (React Native) with Expo Router, Firebase for auth, database and storage, RevenueCat for subscriptions, and EAS Build plus EAS Hosting for the API.
-- **Keyword research** comes from this plugin's `aso-research` skill (`app-suite:aso-research`), which saves to its own research folder.
+- **This skill's folder** is the one this `SKILL.md` is in. Below, `references/`, `scripts/` and `assets/` mean folders there; run scripts by their full path, as `node "<skill folder>/scripts/unit-economics.mjs" ...`. (In Claude Code that's `${CLAUDE_PLUGIN_ROOT}/skills/vet-app-idea/`; in Codex or another agent, the folder it loaded the skill from.) The other App Suite skills are next to it: `../aso-research/`, `../vet-app-idea/`, `../store-review/`.
+- **Ideas folder:** use the first of these that's set:
+  1. Claude Code's plugin setting: `${user_config.ideas_dir}` (skip it if it's empty, or shows up literally with the `${...}` still in it);
+  2. `ideas_dir` in `~/.config/app-suite/settings.json`, if that file exists (agents without plugin settings, like Codex, use this);
+  3. `ideas/` in the current project. One file per idea: `<slug>.md`.
+- **The stack ideas are built on:** use the first of these that's set:
+  1. Claude Code's plugin setting: `${user_config.stack}` (skip it if it's empty, or shows up literally with the `${...}` still in it);
+  2. `stack` in `~/.config/app-suite/settings.json`, if that file exists (agents without plugin settings, like Codex, use this);
+  3. Expo (React Native) with Expo Router, Firebase for auth, database and storage, RevenueCat for subscriptions, and EAS Build plus EAS Hosting for the API.
+- **Keyword research** comes from this plugin's `aso-research` skill, next to this one. Use it as a skill if your agent can (`app-suite:aso-research` in Claude Code, `$aso-research` in Codex); otherwise read `../aso-research/SKILL.md` and follow it. It saves to its own research folder.
 
 ## The six criteria
 
@@ -51,7 +57,7 @@ If the person wants a one-shot report and isn't around to answer, state the assu
 
 ### 3. Get the keyword research
 
-If the research folder already holds research for this idea that's under 30 days old, reuse it. Otherwise run `app-suite:aso-research` on the idea, for the store(s) and country the person cares about. It saves its own folder; put that path in the idea file's `research` field.
+If the research folder already holds research for this idea that's under 30 days old, reuse it. Otherwise run the `aso-research` skill on the idea, for the store(s) and country the person cares about. It saves its own folder; put that path in the idea file's `research` field.
 
 Copy the research's verdict, best keywords and gaps into the "Keyword research" section. The demand and competition verdicts come straight from it.
 
@@ -69,7 +75,7 @@ Fill in the scorecard, then the overall verdict (from `references/criteria.md`):
 - **No-go** on any criterion: **looping**. Add each no-go to "Open concerns" and to the `concerns` list in the header, at round 1.
 - No no-gos: **go, with known risks** if there are maybes, each written under "Known risks" with what would make it a go; otherwise **go**.
 
-Update the header (`step`, `verdict`, each criterion's verdict, `updated`), add a log entry, and render the file so it's readable: `node "${CLAUDE_PLUGIN_ROOT}/skills/aso-research/scripts/render.mjs" <idea file> --open`. Tell the person the result in two or three sentences, starting with the cost analysis's bottom line (what a heavy user costs against the net, and the band), then the overall verdict, and where the file is.
+Update the header (`step`, `verdict`, each criterion's verdict, `updated`), add a log entry, and render the file so it's readable: `node "<skill folder>/../aso-research/scripts/render.mjs" <idea file> --open`. Tell the person the result in two or three sentences, starting with the cost analysis's bottom line (what a heavy user costs against the net, and the band), then the overall verdict, and where the file is.
 
 ### 6. The loop: work through each no-go
 
