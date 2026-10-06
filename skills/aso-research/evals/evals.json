@@ -1,0 +1,54 @@
+{
+  "skill_name": "aso-research",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I'm building a meal-planning app for busy families: you tell it what's in the fridge and it plans the week's dinners and the shopping list. Subscription, $4.99/mo. What keywords should I go after, is there room in this space, and what should my App Store name, subtitle and keyword field be?",
+      "expected_output": "A report built on real autocomplete and top-app data for meal-planning phrases in both stores, naming beatable gaps with evidence, separating app names from keywords, and giving App Store name/subtitle/keyword field within 30/30/100 characters with counts; says volumes are proxies.",
+      "files": [],
+      "assertions": [
+        "The report is saved as outputs/report.md",
+        "The report's numbers (autocomplete ranks, ratings counts, installs or update dates) come from data actually fetched in this run, not from memory",
+        "The report says plainly that search volumes are not available or that its demand figures are proxies, and does not state invented volume numbers such as searches per month",
+        "Every gap or niche the report names comes with concrete evidence (a number or a named app) behind it",
+        "It covers both the App Store and Google Play",
+        "It recommends an App Store name of 30 characters or fewer",
+        "It recommends an App Store subtitle of 30 characters or fewer",
+        "It recommends an App Store keyword field of 100 characters or fewer, comma-separated without spaces after the commas",
+        "The keyword field does not repeat words already used in the recommended name or subtitle",
+        "Competitor app names that appear among store suggestions (brand names from the suggestion lists) are treated as competitors, not recommended as keywords"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "is there room for a simple app that tells you when to water your houseplants? like you add your plants and it reminds you. trying to figure out if this is a crowded space or not before i spend a weekend on it",
+      "expected_output": "Keyword expansion around plant care/watering reminders, top-app competition per phrase in both stores, a clear crowded-or-not answer with the evidence, and the narrower phrases (if any) where a small app could win.",
+      "files": [],
+      "assertions": [
+        "The report is saved as outputs/report.md",
+        "The report's numbers (autocomplete ranks, ratings counts, installs or update dates) come from data actually fetched in this run, not from memory",
+        "The report says plainly that search volumes are not available or that its demand figures are proxies, and does not state invented volume numbers such as searches per month",
+        "Every gap or niche the report names comes with concrete evidence (a number or a named app) behind it",
+        "It covers both the App Store and Google Play",
+        "It gives a direct answer to whether the space is crowded",
+        "It names at least one narrower phrase or angle where a small app could win, with evidence"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Thinking about a habit tracker made specifically for people with ADHD. I want to launch in the UK first. Which search terms should I target on Google Play, and who are the competitors I'd be up against there?",
+      "expected_output": "Research run against the GB storefront (not US), focused on Google Play, with ADHD/habit phrases, competitor table with installs and update dates, and Play title/short description recommendations within 30/80 characters.",
+      "files": [],
+      "assertions": [
+        "The report is saved as outputs/report.md",
+        "The report's numbers (autocomplete ranks, ratings counts, installs or update dates) come from data actually fetched in this run, not from memory",
+        "The report says plainly that search volumes are not available or that its demand figures are proxies, and does not state invented volume numbers such as searches per month",
+        "Every gap or niche the report names comes with concrete evidence (a number or a named app) behind it",
+        "The research uses the UK storefront (gb), not the US one",
+        "It focuses on Google Play as asked",
+        "It lists competitors with their installs and last-updated dates",
+        "It recommends a Play title of 30 characters or fewer and a short description of 80 characters or fewer"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+# skill-creator test runs
+*-workspace/
+node_modules/
+# Eval prompts about real, unreleased apps stay on this machine
+skills/*/evals/local/

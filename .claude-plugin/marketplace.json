@@ -1,0 +1,12 @@
+{
+  "name": "app-suite",
+  "description": "Skills for building mobile apps quickly: ASO keyword research, idea vetting and store review.",
+  "owner": { "name": "Craig Lucksted", "url": "https://github.com/VagrantApe" },
+  "plugins": [
+    {
+      "name": "app-suite",
+      "source": "./",
+      "description": "Skills for finding, vetting and shipping mobile apps."
+    }
+  ]
+}
