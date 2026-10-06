@@ -79,17 +79,18 @@ h2 { font-size: 19px; margin: 32px 0 10px; padding-top: 12px; border-top: 1px so
 h3 { font-size: 16px; margin: 22px 0 8px; }
 p, li { max-width: 78ch; }
 strong { font-weight: 650; }
-code { font: 13px ui-monospace, "SF Mono", Menlo, monospace; background: var(--code); padding: 1px 5px; border-radius: 4px; }
-pre { background: var(--code); padding: 12px; border-radius: 8px; overflow-x: auto; }
+code { font: 13px ui-monospace, "SF Mono", Menlo, monospace; background: var(--code); padding: 1px 5px; border-radius: 4px; overflow-wrap: anywhere; }
+/* Nothing scrolls sideways: a printed page can't scroll, so everything wraps to fit. */
+pre { background: var(--code); padding: 12px; border-radius: 8px; white-space: pre-wrap; overflow-wrap: anywhere; }
 pre code { padding: 0; }
 blockquote { margin: 12px 0; padding: 2px 16px; border-left: 3px solid var(--accent); color: var(--muted); }
-.table { overflow-x: auto; margin: 12px 0 18px; border: 1px solid var(--line); border-radius: 8px; }
+.table { margin: 12px 0 18px; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
 table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
-th, td { padding: 7px 10px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
-th { background: var(--head); font-weight: 600; white-space: nowrap; position: sticky; top: 0; }
+th, td { padding: 7px 10px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); overflow-wrap: break-word; }
+th { background: var(--head); font-weight: 600; }
 tbody tr:last-child td { border-bottom: 0; }
 tbody tr:hover td { background: var(--head); }
-.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.num { text-align: right; font-variant-numeric: tabular-nums; }
 a { color: var(--accent); }
 details { margin: 10px 0; border: 1px solid var(--line); border-radius: 10px; padding: 0 16px; }
 details[open] { padding-bottom: 12px; }
@@ -98,5 +99,14 @@ summary span { font-weight: 600; }
 summary small { color: var(--muted); }
 details h1 { font-size: 18px; margin-top: 8px; }
 details h2 { font-size: 16px; border-top: 0; margin-top: 18px; padding-top: 0; }
-@media print { details > *:not(summary) { display: block; } details { break-inside: auto; } }
+@page { margin: 12mm; }
+@media print {
+  body { font-size: 12px; }
+  main { max-width: none; padding: 0; }
+  table { font-size: 10.5px; }
+  th, td { padding: 5px 7px; }
+  code { font-size: 10px; }
+  tr { break-inside: avoid; }
+  details { break-inside: auto; }
+}
 `

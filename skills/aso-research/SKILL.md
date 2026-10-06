@@ -121,7 +121,7 @@ For the listing recommendations, use each store's rules (as of Oct 2026):
   - App name 30 characters, subtitle 30 characters, keyword field 100 characters.
   - The keyword field is comma-separated with no spaces after the commas.
   - Don't repeat words already in the name or subtitle; Apple combines them.
-  - Use singular forms, skip "app" and "free", and never use competitor names (it gets rejected).
+  - Use singular forms, skip "app" and "free", and leave out every other company's brand: competitors, and also services the app integrates with. Apple rejects other companies' trademarks in metadata; name an integration in the description instead.
 - **Google Play:**
   - Title 30 characters, short description 80 characters, full description 4,000 characters.
   - Play indexes the description, so use the main phrase naturally three to five times.
