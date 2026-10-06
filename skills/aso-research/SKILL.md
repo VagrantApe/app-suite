@@ -141,4 +141,6 @@ If an idea file exists for this app, also replace its "Keyword research" section
 
 ## When something fails
 
+If every request fails to resolve or connect (for example `ENOTFOUND` or `fetch failed` for both stores), the agent's sandbox is probably blocking network access; Codex blocks it by default. Ask the person to allow network access for this task, then rerun. Don't report an empty table as "no demand".
+
 The stores' endpoints are unofficial and occasionally change. If a script reports a failure for one store, finish with the other and say which data is missing. Don't guess the missing numbers. If one store fails every time, the parsing in `scripts/lib/apple.mjs` or `scripts/lib/play.mjs` probably needs updating against the current page.

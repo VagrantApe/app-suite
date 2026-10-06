@@ -26,7 +26,7 @@ If an idea file exists for the app (from `vet-app-idea`), read its policy-risk n
 
 ### 2. Check the rules are current
 
-Run `node scripts/drift.mjs`. It compares Apple's live guidelines with the snapshot the rules were written against, section by section. If a section that a rule cites has changed, read the new wording on Apple's page before relying on that rule, and say so in the report. If the page can't be read, note that the check was skipped.
+Run `node scripts/drift.mjs`. It compares Apple's live guidelines with the snapshot the rules were written against, section by section. If a section that a rule cites has changed, read the new wording on Apple's page before relying on that rule, and say so in the report. If the page can't be read, note that the check was skipped; if nothing online can be reached at all, the agent's sandbox is probably blocking network access (Codex does by default), so ask the person to allow it.
 
 ### 3. Scan
 

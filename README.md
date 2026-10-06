@@ -28,7 +28,7 @@ Restart Codex afterwards so it picks up the skills.
 
 **Other agents** that read the [Agent Skills](https://agentskills.io) format can use the `skills/` folder directly: copy or symlink `skills/aso-research`, `skills/vet-app-idea` and `skills/store-review` into the agent's skills folder (for Codex without plugins, `~/.agents/skills/`). Keep the three together; they use each other's scripts.
 
-**Requires** Node.js 18 or newer on your PATH (the scripts are plain Node with no npm packages).
+**Requires** Node.js 18 or newer on your PATH (the scripts are plain Node with no npm packages), and network access for keyword research and the guideline check. Codex's sandbox blocks the network by default: approve it when asked, or set `sandbox_workspace_write.network_access = true` in `~/.codex/config.toml`.
 
 **Updating:** `claude plugin update app-suite@app-suite`, or `codex plugin marketplace upgrade app-suite` in Codex.
 
