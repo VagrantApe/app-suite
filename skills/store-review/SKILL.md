@@ -83,6 +83,24 @@ Blockers loop back to building. Offer to fix them (they're usually small: a rest
 
 If an idea file exists for the app, set its `step` to `store-review` while blockers are open and to `submit` once there are none, and log the review.
 
+## Data safety and privacy-label answers
+
+When the person is filling in Play's **Data safety** form or Apple's **App Privacy** labels and asks which data types to declare, work it out from the code (sign-in, what's stored, purchases, location, push, what goes to AI or other services), then answer in this format:
+
+1. The first answer in a line (for example "Answer **Yes**"), and why in plain words.
+2. **Overall questions:** encrypted in transit, can users ask for deletion, each with a one-line reason.
+3. **Data types to tick**, as one table with these columns, using the form's own section and type names:
+
+| Section → data type | Why | Collected or shared | Required or optional | Purpose |
+|---|---|---|---|---|
+| **Personal info → Email address** | Comes with Sign in with Google or Apple | Collected | Optional (only to post) | Account management |
+
+4. **For every row:** shared or not (service providers processing for the app, like Firebase or RevenueCat, aren't sharing for Play), and processed ephemerally or not.
+5. **Leave these unticked:** the types people might expect to tick, each with why it isn't collected (speech-to-text on the phone, precise location turned into a city first…).
+6. End by asking for a screenshot if a question doesn't match.
+
+The owner asked for this format by name; use it whenever these forms come up, not only during a full review.
+
 ## Notes
 
 - **Expo config.** The scan reads the resolved config through `npx expo config` when the project's dependencies are installed, so `app.config.ts` is covered; otherwise it reads `app.json` and says so in its header. If it couldn't read the config, tell the person to install dependencies and rerun.
