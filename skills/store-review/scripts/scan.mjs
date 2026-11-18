@@ -12,7 +12,7 @@ import { runRules } from './lib/rules.mjs'
 const USAGE = `Usage: node scan.mjs <project folder> [options]
 
   --listing <file>   store listing to check: JSON with any of name, subtitle,
-                     keywords, title, shortDescription (an EAS Metadata
+                     keywords, title, shortDescription, description (an EAS Metadata
                      store.config.json in the project is read automatically)
   --out <file>       also save the findings as JSON
   --json             print JSON instead of markdown

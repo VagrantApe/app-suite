@@ -1,5 +1,7 @@
 import assert from 'node:assert/strict'
 import { execFileSync } from 'node:child_process'
+import { mkdtempSync, writeFileSync } from 'node:fs'
+import { tmpdir } from 'node:os'
 import { dirname, join } from 'node:path'
 import { test } from 'node:test'
 import { fileURLToPath } from 'node:url'
@@ -16,6 +18,7 @@ test('finds every blocker planted in the bad app', () => {
     'app-icon',
     'app-identity',
     'login-parity',
+    'portrait-feature',
     'purpose-strings',
     'restore-purchases',
     'test-build',
@@ -76,4 +79,24 @@ test('reports guideline sections that were added, removed or reworded', () => {
       ['1.3', 'added']
     ]
   )
+})
+
+test('an app showing government data needs source links and a disclaimer at the top of the description', () => {
+  const gov = (r) => r.findings.filter((f) => f.rule === 'government-sources').map((f) => f.severity)
+  assert.deepEqual(gov(scan('bad-app')), ['check'])
+  assert.deepEqual(gov(scan('clean-app')), [])
+  const dir = mkdtempSync(join(tmpdir(), 'listing-'))
+  const withDescription = (name, description) => {
+    const file = join(dir, name)
+    writeFileSync(file, JSON.stringify({ description }))
+    return gov(scan('bad-app', '--listing', file))
+  }
+  const sources = 'Independent app, not affiliated with any government agency. Source: https://waterdata.usgs.gov/'
+  assert.deepEqual(withDescription('none.json', 'Stream levels from public USGS records.'), ['risk'])
+  assert.deepEqual(withDescription('end.json', 'x'.repeat(1200) + sources), ['risk'])
+  assert.deepEqual(withDescription('top.json', sources + 'x'.repeat(1200)), [])
+})
+
+test('a portrait lock is fine once a config plugin handles the portrait feature', () => {
+  assert.ok(!scan('clean-app').findings.some((f) => f.rule === 'portrait-feature'))
 })

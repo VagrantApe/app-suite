@@ -34,6 +34,10 @@ const PURCHASE_SDKS = ['react-native-purchases', 'expo-iap', 'react-native-iap']
 const SOCIAL_LOGIN = /@react-native-google-signin|GoogleAuthProvider|FacebookAuthProvider|providers\/google|providers\/facebook|oauth_google|signInWithGoogle/
 // A privacy policy the user can reach: a URL, a route, or the words on a button or link.
 const PRIVACY_LINK = /https?:\/\/[^'"`\s]*privacy|['"`]\/?privacy(-policy)?['"`]|['"`>][^'"`<]*privacy policy/i
+// Government data an app shows, by the agency named in its copy or the .gov host it reads from. Acronyms are case-sensitive on purpose.
+const GOV_DATA = /\b(USGS|BLM|NOAA|NASA|NWS|FDA|USDA|CDC|EPA|FAA|FEMA|IRS|USPS|Census Bureau|National Weather Service|Bureau of Land Management|Geological Survey|National Park Service|Forest Service)\b|https?:\/\/[^'"`\s]*\.gov\b/
+const GOV_LINK = /https?:\/\/[^\s)]*\.gov\b/i
+const GOV_DISCLAIMER = /not (affiliated|associated|connected) with|not a government|does(n't|n’t| not) represent (a|any|the) government|independent app/i
 const BRANDS = /\b(apple|iphone|ipad|android|google|play store|chatgpt|openai|gemini|claude|grok|spotify|fitbit|garmin|instagram|tiktok|youtube|facebook|whatsapp|snapchat|netflix|uber|amazon|duolingo|notion|todoist)\b/i
 
 export function runRules(project, listing) {
@@ -179,6 +183,23 @@ export function runRules(project, listing) {
     add('android-permissions', 'risk', 'expo-media-library asks for broad photo access (READ_MEDIA_IMAGES), which Play allows only when it is core to the app; use the photo picker otherwise.', [{ file: 'package.json', text: 'expo-media-library' }])
   if (asked.includes('ACCESS_BACKGROUND_LOCATION') || at(pluginOf('expo-location'), 'options.isAndroidBackgroundLocationEnabled'))
     add('android-permissions', 'risk', 'Background location needs a Play declaration and a video showing why it is core.')
+
+  // Play won't send a release for review while the portrait lock implies a required portrait screen.
+  if (c.orientation === 'portrait' && !plugins.some((p) => typeof p.name === 'string' && /portrait/i.test(p.name)))
+    add('portrait-feature', 'blocker', '`orientation: "portrait"` makes Android require android.hardware.screen.portrait, and no config plugin marks it optional.', [{ file: 'app config', text: 'orientation: portrait' }])
+
+  // Government data: Play wants each source linked and a "not a government app" disclaimer in the description.
+  const gov = search(project, GOV_DATA)
+  if (gov.length) {
+    const description = listing?.description ?? listing?.fullDescription
+    if (!description) add('government-sources', 'check', 'The app shows government data. The Play full description must link each source and say the app is not a government app; pass the description with --listing to check it.', gov.slice(0, 3))
+    else {
+      const top = description.slice(0, 1000)
+      const missing = [!GOV_LINK.test(description) && 'no .gov source link', !GOV_DISCLAIMER.test(description) && 'no "not affiliated with any government agency" disclaimer'].filter(Boolean)
+      if (missing.length) add('government-sources', 'risk', `The app shows government data but the description has ${missing.join(' and ')}.`, gov.slice(0, 3))
+      else if (!GOV_LINK.test(top) || !GOV_DISCLAIMER.test(top)) add('government-sources', 'risk', 'The source links and the disclaimer are in the description but not both near the top; Play rejected a listing that kept the links at the end.', gov.slice(0, 3))
+    }
+  }
 
   // Store listing
   if (listing) {
